@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Request Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-container" id="formSection">
+            <h1>🎮 Game Request Portal</h1>
+            <p>Can't find your favorite game? Request it here and we'll add it ASAP!</p>
+            
+            <form id="requestForm">
+                <div class="form-group">
+                    <label for="name" class="required">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="required">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="game" class="required">Game Title</label>
+                    <input type="text" id="game" name="game" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="platform">Platform</label>
+                    <select id="platform" name="platform">
+                        <option value="PC">PC</option>
+                        <option value="Android">Android</option>
+                        <option value="iOS">iOS</option>
+                        <option value="PlayStation">PlayStation</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="Nintendo Switch">Nintendo Switch</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="details">Additional Details</label>
+                    <textarea id="details" name="details" placeholder="Version, edition, or any special requirements..."></textarea>
+                </div>
+                
+                <button type="submit" id="submitBtn">Submit Request</button>
+            </form>
+            
+            <div id="status"></div>
+        </div>
+        
+        <!-- Confirmation Section (Hidden Initially) -->
+        <div class="confirmation-container" id="confirmationSection">
+            <div class="confirmation-icon">✓</div>
+            <h1>Request Submitted!</h1>
+            <p>Thank you for your request. We'll review it and notify you via email once it's available.</p>
+            <p>Your request helps us improve our collection!</p>
+            <button class="btn-back" id="backBtn">Submit Another Request</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

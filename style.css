@@ -1,0 +1,159 @@
+:root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --dark: #2d3436;
+    --light: #f5f6fa;
+    --success: #00b894;
+    --error: #d63031;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.form-container, .confirmation-container {
+    padding: 40px;
+}
+
+.confirmation-container {
+    display: none;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-align: center;
+}
+
+p {
+    margin-bottom: 30px;
+    color: #666;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.required:after {
+    content: " *";
+    color: var(--error);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #5649d6;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #b2b2b2;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.success {
+    background-color: rgba(0, 184, 148, 0.2);
+    color: var(--success);
+    display: block;
+}
+
+.error {
+    background-color: rgba(214, 48, 49, 0.2);
+    color: var(--error);
+    display: block;
+}
+
+.confirmation-icon {
+    font-size: 80px;
+    color: var(--success);
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    background-color: var(--secondary);
+    margin-top: 30px;
+    max-width: 200px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .form-container, .confirmation-container {
+        padding: 25px;
+    }
+}
